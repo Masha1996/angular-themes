@@ -1,0 +1,9 @@
+$my-white-primary: mat-palette($mat-grey, 200, 500, 800);
+$my-white-accent: mat-palette($mat-brown, 200);
+$my-white-warn: mat-palette($mat-deep-orange, 200);
+
+$my-white-theme: mat-light-theme(
+    $my-white-primary,
+    $my-white-accent,
+    $my-white-warn
+);

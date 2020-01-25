@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import './scss/_variables.scss';
+@import './themes/white-theme';
+@import './themes/black-theme';
+
+@import './app/app.component.scss';
+
+@mixin custom-components-theme($theme) {
+  @include my-app-component-theme($theme);
+}
+
+.white-theme {
+  @include angular-material-theme($my-white-theme);
+  @include custom-components-theme($my-white-theme);
+}
+
+.black-theme {
+  @include angular-material-theme($my-black-theme);
+  @include custom-components-theme($my-black-theme);
+}
+
