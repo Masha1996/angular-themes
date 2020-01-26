@@ -17,6 +17,7 @@ import {MatListModule} from '@angular/material/list';
 
 import { StoreModule } from '@ngrx/store';
 import { themesReducer } from './themes.reducer';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import 'hammerjs';
 
@@ -38,6 +39,8 @@ import 'hammerjs';
     MatInputModule,
     MatCardModule,
     MatListModule,
+    FormsModule,
+    ReactiveFormsModule,
     StoreModule.forRoot({ theme: themesReducer })
   ],
   providers: [],

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
@@ -24,8 +25,16 @@ export class AppComponent {
       console.log(this.store);
     }
 
-    whiteTheme() {
-      this.store.dispatch({type: 'WHITE'});
-      console.log(this.store);
-    }
+  whiteTheme() {
+    this.store.dispatch({type: 'WHITE'});
+    console.log(this.store);
+  }
+
+  email = new FormControl('', [Validators.required, Validators.email]);
+
+  getErrorMessage() {
+    return this.email.hasError('required') ? 'You must enter a value' :
+        this.email.hasError('email') ? 'Not a valid email' :
+            '';
+  }
 }

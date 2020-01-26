@@ -4,6 +4,10 @@
   padding: 20px;
 }
 
+button {
+  margin: 0 5px;
+}
+
 @mixin my-app-component-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);

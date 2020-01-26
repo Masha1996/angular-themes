@@ -1,6 +1,5 @@
 <div [class]="'theme-wrapper ' + (theme$ | async)">
   <div class="container">
-    <mat-toolbar color="warn">{{ theme$ | async }}</mat-toolbar>
 
     <form>
       <mat-form-field appearance="outline">
@@ -12,7 +11,14 @@
       <div>
         <mat-checkbox>Check me!</mat-checkbox>
       </div>
-    </form>
+      <mat-form-field>
+        <input matInput
+               placeholder="Enter your email"
+               [formControl]="email"
+               required
+        >
+        <mat-error *ngIf="email.invalid">АААА</mat-error>
+      </mat-form-field>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid asperiores beatae cupiditate dolorum eius
       eligendi excepturi illum incidunt nemo neque possimus ratione, rerum soluta voluptas. Adipisci assumenda aut,
